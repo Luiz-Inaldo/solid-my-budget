@@ -41,6 +41,9 @@ form button[type="submit"] {
   display: block;
   margin-bottom: 8px;
   color: var(--secondary-color);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .form-label-container input[type="text"],

@@ -22,7 +22,7 @@ export const NewTransaction = () => {
 
   const handleClose = () => setOpenModalConfigs({ open: false, type: null });
 
-  const { register, submit, errors, watch } = createForm<ITransactionProps>({
+  const { register, submit, errors } = createForm<ITransactionProps>({
     validators: {
       name: requiredValidator('Campo obrigatório'),
       value: requiredValidator('Campo obrigatório'),
@@ -46,6 +46,8 @@ export const NewTransaction = () => {
           transactions: [...prev!.transactions, newTransaction]
         } as ListProps
       });
+
+      document.getElementsByTagName('form')[0].reset(); // resetando formulário
 
       setSuccessMessage(true);
       setTimeout(() => {
