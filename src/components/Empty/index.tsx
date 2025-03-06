@@ -2,6 +2,8 @@ import { createSignal, Match, onCleanup, Show, Switch } from 'solid-js';
 import styles from './styles.module.css'
 import { formatCurrency } from '../../functions/formatCurrency';
 import { useGlobalContext } from '../../context/GlobalContext';
+
+import logoImg from '../../assets/logo.png'
 export const Empty = () => {
 
     const [value, setValue] = createSignal<string>('');
@@ -33,7 +35,7 @@ export const Empty = () => {
 
     return (
         <div class={styles.container}>
-            <img src='/src/assets/logo.png' width={250} height={250} class={styles.logo} />
+            <img src={logoImg} width={250} height={250} class={styles.logo} />
             <h1 class={styles.title}>Vamos <br /> Começar</h1>
             <p class={styles.paragraph}>
                 Primeiro precisamos saber o valor do seu salário mensal

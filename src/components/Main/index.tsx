@@ -7,6 +7,8 @@ import { useGlobalContext } from '../../context/GlobalContext';
 import Transactions from '../Transactions';
 import { useNavigate } from '@solidjs/router';
 
+import emptyImg from "/src/assets/empty_list.png";
+
 const EmptyList = () => {
 
     const { setOpenModalConfigs } = useGlobalContext();
@@ -15,7 +17,7 @@ const EmptyList = () => {
 
     return (
         <div class={styles['empty-list-wrapper']}>
-            <img src="/src/assets/empty_list.png" alt="empy list" width={150} />
+            <img src={emptyImg} alt="empy list" width={150} />
             <p>Parece que sua lista de transações está vazia.</p>
             <button onclick={handleOpenModal} class={styles['empty-list-button']}>
                 <Plus />
