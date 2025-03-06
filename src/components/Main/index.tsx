@@ -8,6 +8,7 @@ import Transactions from '../Transactions';
 import { useNavigate } from '@solidjs/router';
 
 import emptyImg from "/src/assets/empty_list.png";
+import moneyImg from "/src/assets/money.svg";
 
 const EmptyList = () => {
 
@@ -36,7 +37,7 @@ export const Main = () => {
     return (
         <>
             <header class={styles.header}>
-                <img src="/src/assets/money.svg" alt="pig-bank" width={30} />
+                <img src={moneyImg} alt="pig-bank" width={30} />
                 <h1>Controle Financeiro</h1>
             </header>
             <main class={styles.main}>
