@@ -1,0 +1,112 @@
+.header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px;
+  height: 60px;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+
+  h1 {
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 1px;
+  }
+}
+
+.separator {
+  border: 1px solid var(--border);
+}
+
+.main {
+  display: grid;
+}
+
+.balance {
+  display: grid;
+  color: var(--primary-color);
+  gap: 8px;
+  padding: 24px 12px;
+
+  & > div {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    justify-content: space-between;
+
+    & p {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+  }
+
+  & :nth-child(2) span {
+    color: var(--green);
+  }
+
+  & :nth-child(3) span {
+    color: var(--red);
+  }
+}
+
+.empty-list-wrapper {
+  display: grid;
+  place-items: center;
+  padding: 48px 24px 12px 24px;
+  gap: 16px;
+
+  & p {
+    color: var(--secondary-color);
+  }
+}
+
+.empty-list-button {
+  width: 100%;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  border-radius: 8px;
+  border: none;
+  background-color: var(--primary-color);
+  color: var(--background-color);
+  font-weight: 600;
+  cursor: pointer;
+  margin: 12px 0;
+  text-transform: uppercase;
+}
+
+.actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 12px;
+  width: 300px;
+  margin-inline: auto;
+
+  & > div {
+    display: grid;
+    place-items: center;
+    gap: 8px;
+  }
+
+  & > div > button {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    background-color: var(--primary-color);
+    padding: 8px;
+    border-radius: 8px;
+    display: grid;
+    place-items: center;
+  }
+
+  & > div > button > svg {
+    color: var(--background-color);
+  }
+
+  & > div > p {
+    color: var(--secondary-color);
+    font-size: 12px;
+  }
+}
