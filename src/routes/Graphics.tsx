@@ -8,11 +8,11 @@ const GraphicPage = () => {
 
   return (
     <div
-    style={{
-      'max-width': '430px',
-      'min-height': '100dvh',
-      'margin': '0 auto'
-    }}
+      style={{
+        'max-width': '430px',
+        'min-height': '100dvh',
+        'margin': '0 auto'
+      }}
     >
       <Show when={list() !== null} fallback={<h1>Carregando...</h1>}>
         <GeneralChart list={list} />

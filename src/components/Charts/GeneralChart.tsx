@@ -1,5 +1,5 @@
 import { onMount } from 'solid-js'
-import { Chart, Title, Tooltip, Legend, Colors } from 'chart.js'
+import { Chart, Title, Tooltip, Legend, Colors, LinearScale, CategoryScale, BarElement } from 'chart.js'
 import { Bar, Line } from 'solid-chartjs'
 import { CATEGORIES } from '../../constants/categories'
 import { getTotalCategoriesValues } from '../../functions/getTotalCategories'
@@ -7,7 +7,7 @@ import { getTotalCategoriesValues } from '../../functions/getTotalCategories'
 const GeneralChart = (props: any) => {
 
     onMount(() => {
-        Chart.register(Title, Tooltip, Legend, Colors)
+        Chart.register(Title, Tooltip, Legend, Colors, LinearScale, CategoryScale, BarElement)
     })
 
     const totalValues = getTotalCategoriesValues(props.list());
